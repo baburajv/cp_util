@@ -1,0 +1,72 @@
+{
+    "type": "object",
+    "properties": {
+        "name": { "type": "string" },
+        "namespace": { "type": "string" },
+        "contentPackId": { "type": "string" },
+        "framework": { "type": "string" },
+        "version": { "type": "string" },
+        "extractedFields":{  "type": "array" },
+        "queries":{"type": "array" },
+        "alerts":{"type": "array" },
+        "author": { "type": "string" },
+        "url": { "type": "string" },
+        "aliasFields":{ "type": "array" },
+        "aliasRules":{ "type": "array" },
+        "contentVersion": { "type": "string" },
+        "info": { "type": "string" },
+        "instructions": { "type": "string" },
+        "upgradeInstructions": { "type": "string" },
+        "icon": { "type": "string" },
+        "dashboardSections": { "type": "array",
+            "items": {
+                    "type": "object",
+                    "properties": {
+                        "views": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "properties": {
+                                    "name": { "type": "string" },
+                                    "constraints": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "object",                                
+                                                "properties": {
+                                                    "internalName": { "type": "string" },
+                                                    "operator": { "type": "string" }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "rows": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "widgets": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "name": { "type": "string" },
+                                                        "info": { "type": "string" },
+                                                        "chartType": { "type": "string" },
+                                                        "chartOptions": { "type": "string" },
+                                                        "widgetType": { "type": "string" },
+                                                        "chartQuery": { "type": "string" },
+                                                        "messageQuery": { "type": "string" }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                    }
+            }
+        }
+    }
+}
+                    
